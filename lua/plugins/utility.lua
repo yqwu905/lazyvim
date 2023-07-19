@@ -48,7 +48,9 @@ return {
             { "<A-h>", "<cmd>ToggleTerm<cr>", desc = "toggle term" },
         },
         config = function(_, opts)
-            vim.opt.shell = "zsh"
+            if vim.fn.has("linux") then
+                vim.opt.shell = "zsh"
+            end
             require("toggleterm").setup(opts)
         end,
     },
