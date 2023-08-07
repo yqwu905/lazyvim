@@ -87,4 +87,14 @@ vim.api.nvim_create_user_command("CallGraph", function()
     end)
 end, {})
 
+function utils.update_cscope_db()
+    io.popen("fd --full-path 'src/' > cscope.lst;cscope -b -i cscope.lst;rm cscope.lst")
+end
+
+vim.api.nvim_create_user_command("UpdateCscop", function()
+    pcall(function()
+        utils.update_cscope_db()
+    end)
+end, {})
+
 return utils

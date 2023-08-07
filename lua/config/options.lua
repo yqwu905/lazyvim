@@ -26,3 +26,4 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 
 vim.cmd("set noswapfile")
+vim.cmd("set nospell")

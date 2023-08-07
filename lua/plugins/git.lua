@@ -11,9 +11,18 @@ return {
             { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "diffview close" },
             { "<leader>gdf", "<cmd>DiffviewFileHistory %<cr>", desc = "diffview current file" },
             { "<leader>gdh", "<cmd>DiffviewFileHistory<cr>", desc = "diffview history" },
-            { "<leader>gdv", "<cmd>DiffviewOpen<cr>", desc = "diffview" },
+            { "<leader>gdv", "<cmd>DiffviewOpen -uno<cr>", desc = "diffview" },
         },
         opts = {},
         lazy = true,
+    },
+
+    {
+        "NeogitOrg/neogit",
+        opts = {},
+        cmd = { "Neogit" },
+        keys = {
+            { "<leader>gg", "<cmd>Neogit<cr>", desc = "neogit" },
+        },
     },
 }
