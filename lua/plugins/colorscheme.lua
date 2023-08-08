@@ -6,4 +6,11 @@ return {
             transparent = false,
         },
     },
+
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "catppuccin",
+        },
+    },
 }

@@ -1,4 +1,7 @@
+-- 提供独立功能的插件.
+
 return {
+    -- 持久高亮单词
     {
         "yqwu905/hi-my-words.nvim",
         opts = {},
@@ -9,15 +12,7 @@ return {
         },
     },
 
-    {
-        "dhruvasagar/vim-table-mode",
-        config = function()
-            vim.g.table_mode_corner = "|"
-        end,
-        cmd = { "TableModeToggle" },
-        keys = { { "<leader>ut", "<cmd>TableModeToggle<cr>", desc = "Table mode" } },
-    },
-
+    -- Quickfix 增强
     {
         "kevinhwang91/nvim-bqf",
         ft = { "qf" },
@@ -32,14 +27,7 @@ return {
         opts = {},
     },
 
-    {
-        "max397574/better-escape.nvim",
-        event = "InsertEnter",
-        config = function()
-            require("better_escape").setup()
-        end,
-    },
-
+    -- Terminal
     {
         "akinsho/toggleterm.nvim",
         cmd = { "ToggleTerm" },
@@ -53,5 +41,15 @@ return {
             end
             require("toggleterm").setup(opts)
         end,
+    },
+
+    -- Buffer inactive若干分钟后关闭Buffer
+    {
+        "chrisgrieser/nvim-early-retirement",
+        opts = {
+            retirementAgeMins = 10,
+        },
+        config = true,
+        event = "VeryLazy",
     },
 }

@@ -1,3 +1,5 @@
+-- 更改LazyVim插件的配置
+
 return {
     {
         "nvim-telescope/telescope.nvim",

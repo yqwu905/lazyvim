@@ -1,9 +1,12 @@
+-- Git相关插件
 return {
+    -- Git blame信息
     {
         "f-person/git-blame.nvim",
         event = { "BufReadPre", "BufNewFile" },
     },
 
+    -- Diffview
     {
         "sindrets/diffview.nvim",
         cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory", "DiffviewRefresh" },
@@ -17,6 +20,7 @@ return {
         lazy = true,
     },
 
+    -- Neogit, 替代LazyGit
     {
         "NeogitOrg/neogit",
         opts = {},
