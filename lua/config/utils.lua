@@ -34,7 +34,7 @@ function utils.async_run_code()
     end
     if script_ext ~= nil then
         local function is_run_script(path)
-            return string.match(path, "_nvim_run_?.*%." .. script_ext)
+            return string.match(path, "nvim_run_?.*%." .. script_ext)
         end
         if vim.fn.isdirectory(".nvim") ~= 0 then
             for file in vim.fs.dir(".nvim") do
@@ -56,7 +56,7 @@ function utils.async_run_code()
             vim.ui.select(run_scripts, {
                 prompt = "Choose run script",
                 format_item = function(item)
-                    local name = string.match(item, "_nvim_run_?(.*)%." .. script_ext)
+                    local name = string.match(item, "nvim_run_?(.*)%." .. script_ext)
                     if #name == 0 then
                         return "Default"
                     end
@@ -84,16 +84,6 @@ end
 vim.api.nvim_create_user_command("CallGraph", function()
     pcall(function()
         utils.call_graph(vim.fn.expand("<cword>"), 3, 3)
-    end)
-end, {})
-
-function utils.update_cscope_db()
-    io.popen("fd --full-path 'src/' > cscope.lst;cscope -b -i cscope.lst;rm cscope.lst")
-end
-
-vim.api.nvim_create_user_command("UpdateCscop", function()
-    pcall(function()
-        utils.update_cscope_db()
     end)
 end, {})
 
