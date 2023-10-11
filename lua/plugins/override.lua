@@ -27,7 +27,7 @@ return {
             servers = {
                 clangd = {
                     single_file_support = false,
-                    root_dir = require("lspconfig.util").root_pattern("compile_commands.json"),
+                    root_dir = require("lspconfig.util").root_pattern("compile_commands.json", ".clangd"),
                 },
             },
         },

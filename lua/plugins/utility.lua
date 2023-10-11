@@ -42,14 +42,4 @@ return {
             require("toggleterm").setup(opts)
         end,
     },
-
-    -- Buffer inactive若干分钟后关闭Buffer
-    {
-        "chrisgrieser/nvim-early-retirement",
-        opts = {
-            retirementAgeMins = 10,
-        },
-        config = true,
-        event = "VeryLazy",
-    },
 }
