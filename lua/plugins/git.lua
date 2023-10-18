@@ -29,9 +29,4 @@ return {
             { "<leader>gg", "<cmd>Neogit<cr>", desc = "neogit" },
         },
     },
-
-    {
-        "akinsho/git-conflict.nvim",
-        opts = {},
-    },
 }
