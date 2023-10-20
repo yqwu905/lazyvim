@@ -49,6 +49,9 @@ return {
                 },
             },
         },
+        autotag = {
+            enable = true,
+        },
     },
 
     {

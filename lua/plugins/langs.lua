@@ -9,4 +9,8 @@ return {
         end,
         cmds = { "MarkdownPreview", "MarkdownPreviewStop" },
     },
+
+    {
+        "windwp/nvim-ts-autotag",
+    },
 }
