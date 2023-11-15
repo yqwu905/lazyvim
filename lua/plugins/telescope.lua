@@ -16,6 +16,7 @@ return {
         },
         keys = {
             { "<leader><space>", "<cmd>Telescope find_files<cr>", "find fiels" },
+            { "<leader>slr", "<cmd>Telescope lsp_references<cr>", "find lsp references" },
         },
         opts = {
             defaults = {
