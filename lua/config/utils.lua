@@ -67,7 +67,7 @@ function utils.async_run_code()
                     vim.notify("Abort run")
                     return
                 end
-                require("toggleterm").exec(script_runner .. choice .. " " .. vim.fn.expand("%:t"))
+                require("toggleterm").exec(script_runner .. choice .. " " .. vim.fn.expand("%:p"))
             end)
         end
     elseif utils.runner[vim.bo.filetype] ~= nil then
